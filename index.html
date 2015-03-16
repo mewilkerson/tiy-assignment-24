@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My App</title>
+
+  <!-- ==== STYLE SHEETS ==== -->
+
+  <!-- VENDOR -->
+  <link rel="stylesheet" href="vendor/css/vendor.css">
+
+  <!-- OURS -->
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <!-- ==== JAVASCRIPT ==== -->
+
+  <!-- VENDOR -->
+  <script src="vendor/js/vendor.js"></script>
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+  <script>
+    SC.initialize({
+      client_id: "c8bce9e7fae8a4674a3aaa85dbf9a633",
+      redirect_uri: "http://localhost:8000/callback.html",
+    });
+  </script>
+
+  <!-- TEMPLATES -->
+  <script src="js/templates.js"></script>
+
+  <!-- OURS -->
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="js/models.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="header-wrapper">
+      <header>
+        <h1>MySoundApp</h1>
+        <div class="search-field-container">
+          <form class="searchbox" action="">
+            <input class="search" type="text" placeholder="Tell me your favorite genre">
+            <input class="submit" type="submit" value="Search">
+          </form> 
+        </div>
+      </header>
+    </div>
+
+    <div class="tracks">
+    </div>
+
+    <div class="starred-view"></div>
+
+  </div>  
+</body>
+
+</html>
